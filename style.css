@@ -1,0 +1,144 @@
+/* Colores del CV: azul marino #12314F y azul medio #3F7EA6 */
+:root {
+  --marino: #12314F;
+  --azul: #3F7EA6;
+  --texto: #1d2733;
+  --gris: #5b6672;
+  --fondo: #eef2f6;
+  --tarjeta: #ffffff;
+  --borde: #d5dde6;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --marino: #9cc3e0;
+    --azul: #6aa6cf;
+    --texto: #e6edf3;
+    --gris: #a3afbb;
+    --fondo: #0e1621;
+    --tarjeta: #16202d;
+    --borde: #2b3a4c;
+  }
+}
+
+* { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px 16px;
+  background: var(--fondo);
+  color: var(--texto);
+  font-family: Carlito, Calibri, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  line-height: 1.5;
+}
+
+.tarjeta {
+  width: 100%;
+  max-width: 440px;
+  background: var(--tarjeta);
+  border: 1px solid var(--borde);
+  border-radius: 16px;
+  padding: 32px 24px;
+  text-align: center;
+}
+
+.foto {
+  width: 128px;
+  height: 128px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid var(--azul);
+  margin-bottom: 16px;
+}
+
+h1 {
+  margin: 0;
+  font-size: 1.75rem;
+  line-height: 1.2;
+  color: var(--marino);
+}
+
+.rol {
+  margin: 4px 0 12px;
+  font-size: 1.05rem;
+  color: var(--azul);
+  font-weight: 600;
+}
+
+.linea {
+  margin: 0 0 24px;
+  color: var(--gris);
+}
+
+.cv {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.enlaces {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-top: 20px;
+  border-top: 1px solid var(--borde);
+}
+
+.boton {
+  display: block;
+  width: 100%;
+  padding: 12px 16px;
+  border: 1.5px solid var(--marino);
+  border-radius: 10px;
+  color: var(--marino);
+  text-decoration: none;
+  font-weight: 600;
+  overflow-wrap: anywhere;
+}
+
+.boton:hover, .boton:focus-visible { background: var(--fondo); }
+
+.boton.principal {
+  background: #12314F;
+  border-color: #12314F;
+  color: #ffffff;
+  font-size: 1.05rem;
+}
+
+.boton.principal:hover, .boton.principal:focus-visible { background: #3F7EA6; border-color: #3F7EA6; }
+
+@media (prefers-color-scheme: dark) {
+  .boton.principal { background: #3F7EA6; border-color: #3F7EA6; }
+  .boton.principal:hover, .boton.principal:focus-visible { background: #5592ba; border-color: #5592ba; }
+}
+
+.descargar {
+  color: var(--azul);
+  font-size: 0.95rem;
+}
+
+a:focus-visible { outline: 3px solid var(--azul); outline-offset: 2px; }
+
+/* Proyectos (bloque comentado en index.html hasta que haya contenido) */
+.proyectos {
+  margin-top: 24px;
+  padding-top: 20px;
+  border-top: 1px solid var(--borde);
+  text-align: left;
+}
+
+.proyectos h2 { margin: 0 0 12px; font-size: 1.2rem; color: var(--marino); }
+
+.proyecto { margin-bottom: 16px; }
+.proyecto h3 { margin: 0 0 4px; font-size: 1.05rem; color: var(--marino); }
+.proyecto p { margin: 0 0 4px; }
+.proyecto .tecnologias { color: var(--gris); font-size: 0.9rem; }
+.proyecto a { color: var(--azul); }
